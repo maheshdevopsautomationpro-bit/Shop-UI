@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase/client';
 import { Plus, Edit, Trash2, MoveUp, MoveDown } from 'lucide-react';
+import Image from 'next/image';
 import type { Category } from '@/types/database';
 
 export default function AdminCategoriesPage() {
@@ -168,11 +169,14 @@ export default function AdminCategoriesPage() {
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-3">
                                                 {category.image_url ? (
-                                                    <img
-                                                        src={category.image_url}
-                                                        alt={category.name}
-                                                        className="w-12 h-12 object-cover rounded"
-                                                    />
+                                                    <div className="relative w-12 h-12 flex-shrink-0">
+                                                        <Image
+                                                            src={category.image_url}
+                                                            alt={category.name}
+                                                            fill
+                                                            className="object-cover rounded"
+                                                        />
+                                                    </div>
                                                 ) : (
                                                     <div className="w-12 h-12 bg-gray-200 rounded flex items-center justify-center text-gray-400 text-xs">
                                                         No image
@@ -195,8 +199,8 @@ export default function AdminCategoriesPage() {
                                             <button
                                                 onClick={() => toggleActive(category.id, category.active)}
                                                 className={`px-3 py-1 rounded-full text-xs font-medium ${category.active
-                                                        ? 'bg-green-100 text-green-800'
-                                                        : 'bg-gray-100 text-gray-800'
+                                                    ? 'bg-green-100 text-green-800'
+                                                    : 'bg-gray-100 text-gray-800'
                                                     }`}
                                             >
                                                 {category.active ? 'Active' : 'Inactive'}

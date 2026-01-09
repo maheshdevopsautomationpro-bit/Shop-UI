@@ -147,7 +147,7 @@ export async function getActiveFestivalOffer(): Promise<FestivalOffer | null> {
 export async function getActivePaymentMethods(): Promise<PaymentSetting[]> {
     const { data, error } = await supabase
         .from('payment_settings')
-        .select('id, provider, display_name, upi_id, active')
+        .select('*')
         .eq('active', true)
         .order('created_at', { ascending: true });
 
