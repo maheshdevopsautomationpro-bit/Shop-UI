@@ -129,18 +129,33 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
 ### 5. Create Admin User
 
-In Supabase SQL Editor, run:
+In Supabase SQL Editor, run this script to create your admin account:
 
 ```sql
--- Create an admin user (replace with your email/password)
-INSERT INTO auth.users (email, encrypted_password, email_confirmed_at)
-VALUES ('admin@example.com', crypt('your_password', gen_salt('bf')), NOW());
+-- 1. Clean up existing records if any
+DELETE FROM admin_users WHERE email = 'mahesh.devops.automationpro@gmail.com';
+DELETE FROM auth.users WHERE email = 'mahesh.devops.automationpro@gmail.com';
 
--- Get the user ID and add to admin_users table
+-- 2. Create the user in Supabase Auth
+INSERT INTO auth.users (id, email, encrypted_password, email_confirmed_at, role, last_sign_in_at, created_at, updated_at, raw_app_meta_data, raw_user_meta_data)
+VALUES (
+    gen_random_uuid(),
+    'mahesh.devops.automationpro@gmail.com',
+    crypt('Manh@#8123957289', gen_salt('bf')),
+    now(),
+    'authenticated',
+    now(),
+    now(),
+    now(),
+    '{"provider":"email","providers":["email"]}',
+    '{}'
+);
+
+-- 3. Link to our admin_users table
 INSERT INTO admin_users (id, email, full_name, role, active)
-SELECT id, email, 'Admin User', 'admin', true
+SELECT id, email, 'Mahesh (Admin)', 'admin', true
 FROM auth.users
-WHERE email = 'admin@example.com';
+WHERE email = 'mahesh.devops.automationpro@gmail.com';
 ```
 
 ### 6. Run Development Server
