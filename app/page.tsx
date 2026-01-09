@@ -1,3 +1,4 @@
+```
 import HeroCarousel from '@/components/home/HeroCarousel';
 import ProductCard from '@/components/product/ProductCard';
 import Link from 'next/link';
@@ -35,9 +36,9 @@ export default async function HomePage() {
         : [
             {
                 id: 'default',
-                image: 'https://placehold.co/1920x800/ef4444/ffffff?text=SAKTHI+TEXTILES',
-                title: 'Welcome to SAKTHI TEXTILES',
-                subtitle: 'Quality Garments in Erode',
+                image: 'https://placehold.co/1920x800/f3f4f6/374151?text=ARUTPERUNJOTHI+JAVULI+KADAI',
+                title: 'Welcome to ARUTPERUNJOTHI',
+                subtitle: 'Exquisite Garments & Quality Fabrics since 1994',
             },
         ];
 
@@ -57,96 +58,26 @@ export default async function HomePage() {
                 </section>
             )}
 
-            {/* New Arrivals */}
-            {newArrivals.length > 0 && (
-                <section className="py-12 md:py-16 bg-white">
-                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex items-center justify-between mb-8">
-                            <div>
-                                <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900">
-                                    New Arrivals
-                                </h2>
-                                <p className="text-gray-600 mt-2">
-                                    Discover our latest collection
-                                </p>
-                            </div>
-                            <Link
-                                href="/products"
-                                className="hidden md:flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors"
-                            >
-                                View All <ArrowRight className="w-5 h-5" />
-                            </Link>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {newArrivals.map((product) => (
-                                <ProductCard
-                                    key={product.id}
-                                    product={product}
-                                    festivalOffer={festivalOffer}
-                                />
-                            ))}
-                        </div>
-
-                        <div className="mt-8 text-center md:hidden">
-                            <Link href="/products" className="btn-primary">
-                                View All Products
-                            </Link>
-                        </div>
-                    </div>
-                </section>
-            )}
-
-            {/* Featured Products */}
-            {featuredProducts.length > 0 && (
-                <section className="py-12 md:py-16 bg-gray-50">
-                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex items-center justify-between mb-8">
-                            <div>
-                                <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900">
-                                    Best Sellers
-                                </h2>
-                                <p className="text-gray-600 mt-2">
-                                    Our most popular products
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {featuredProducts.map((product) => (
-                                <ProductCard
-                                    key={product.id}
-                                    product={product}
-                                    festivalOffer={festivalOffer}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            )}
-
-            {/* Categories */}
+            {/* Categories - Circular List */}
             {categories.length > 0 && (
-                <section className="py-12 md:py-16 bg-white">
+                <section className="py-12 md:py-16 bg-white overflow-hidden">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900">
-                                Shop by Category
+                        <div className="text-center mb-10">
+                            <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 uppercase tracking-tight">
+                                ARUTPERUNJOTHI Featured Categories
                             </h2>
-                            <p className="text-gray-600 mt-2">
-                                Explore our wide range of products
-                            </p>
+                            <div className="h-1 w-20 bg-primary-600 mx-auto mt-4 rounded-full"></div>
                         </div>
 
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                        <div className="flex flex-wrap justify-center gap-6 md:gap-10">
                             {categories.map((category) => (
                                 <Link
                                     key={category.id}
-                                    href={`/category/${category.slug}`}
-                                    className="group"
+                                    href={`/ category / ${ category.slug } `}
+                                    className="group flex flex-col items-center w-24 md:w-32"
                                 >
-                                    <div className="card hover:shadow-xl transition-all duration-300">
-                                        <div className="relative aspect-square bg-gradient-to-br from-primary-50 to-secondary-50 flex items-center justify-center">
+                                    <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary-600 transition-all duration-300 shadow-md">
+                                        <div className="absolute inset-0 bg-gray-50 flex items-center justify-center">
                                             {category.image_url ? (
                                                 <Image
                                                     src={category.image_url}

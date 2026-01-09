@@ -28,21 +28,21 @@ export default function Header() {
 
     return (
         <header
-            className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
-                    ? 'bg-white/95 backdrop-blur-md shadow-md'
-                    : 'bg-white'
+            className={`sticky top-0 z-50 transition-all duration-300 border-b ${scrolled
+                ? 'bg-white/95 backdrop-blur-md border-gray-100 shadow-sm'
+                : 'bg-white border-transparent'
                 }`}
         >
             <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16 lg:h-20">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link href="/" className="flex items-center space-x-2">
-                            <div className="bg-gradient-to-br from-primary-600 to-primary-700 text-white font-display font-bold text-xl lg:text-2xl px-4 py-2 rounded-lg shadow-lg">
-                                SAKTHI
-                            </div>
-                            <span className="hidden sm:block text-sm text-gray-600 font-medium">
-                                TEXTILES
+                        <Link href="/" className="flex flex-col">
+                            <span className="font-display font-bold text-lg lg:text-xl tracking-tighter text-gray-900 leading-none">
+                                ARUTPERUNJOTHI
+                            </span>
+                            <span className="text-[10px] lg:text-xs text-primary-600 font-bold tracking-[0.2em] leading-none mt-1">
+                                JAVULI KADAI
                             </span>
                         </Link>
                     </div>
