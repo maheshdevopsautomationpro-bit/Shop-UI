@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase/client';
 import { Plus, Edit, Trash2, Search } from 'lucide-react';
+import Image from 'next/image';
 import type { Product, Category } from '@/types/database';
 
 export default function AdminProductsPage() {
@@ -144,11 +145,14 @@ export default function AdminProductsPage() {
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-3">
                                                 {product.images && product.images[0] ? (
-                                                    <img
-                                                        src={product.images[0]}
-                                                        alt={product.name}
-                                                        className="w-12 h-12 object-cover rounded"
-                                                    />
+                                                    <div className="relative w-12 h-12 flex-shrink-0">
+                                                        <Image
+                                                            src={product.images[0]}
+                                                            alt={product.name}
+                                                            fill
+                                                            className="object-cover rounded"
+                                                        />
+                                                    </div>
                                                 ) : (
                                                     <div className="w-12 h-12 bg-gray-200 rounded flex items-center justify-center text-gray-400 text-xs">
                                                         No image
@@ -175,8 +179,8 @@ export default function AdminProductsPage() {
                                             <button
                                                 onClick={() => toggleActive(product.id, product.active)}
                                                 className={`px-3 py-1 rounded-full text-xs font-medium ${product.active
-                                                        ? 'bg-green-100 text-green-800'
-                                                        : 'bg-gray-100 text-gray-800'
+                                                    ? 'bg-green-100 text-green-800'
+                                                    : 'bg-gray-100 text-gray-800'
                                                     }`}
                                             >
                                                 {product.active ? 'Active' : 'Inactive'}
@@ -184,8 +188,8 @@ export default function AdminProductsPage() {
                                         </td>
                                         <td className="px-6 py-4">
                                             <span className={`px-3 py-1 rounded-full text-xs font-medium ${product.featured
-                                                    ? 'bg-purple-100 text-purple-800'
-                                                    : 'bg-gray-100 text-gray-600'
+                                                ? 'bg-purple-100 text-purple-800'
+                                                : 'bg-gray-100 text-gray-600'
                                                 }`}>
                                                 {product.featured ? 'Yes' : 'No'}
                                             </span>

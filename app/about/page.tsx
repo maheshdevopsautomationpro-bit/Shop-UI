@@ -153,7 +153,7 @@ export default function AboutPage() {
                             Visit Our Store
                         </h2>
                         <p className="text-gray-600 mb-6">
-                            Experience our quality products in person. We're located in the heart of Erode.
+                            Experience our quality products in person. We&apos;re located in the heart of Erode.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a href="/contact" className="btn-primary">

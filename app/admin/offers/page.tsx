@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase/client';
 import { Plus, Edit, Trash2, Calendar } from 'lucide-react';
+import Image from 'next/image';
 import type { FestivalOffer } from '@/types/database';
 import { formatDate } from '@/lib/utils';
 
@@ -113,10 +114,11 @@ export default function AdminOffersPage() {
                                 {/* Banner Image */}
                                 {offer.banner_image_url && (
                                     <div className="aspect-[3/1] bg-gray-100 relative">
-                                        <img
+                                        <Image
                                             src={offer.banner_image_url}
                                             alt={offer.offer_name}
-                                            className="w-full h-full object-cover"
+                                            fill
+                                            className="object-cover"
                                         />
                                     </div>
                                 )}
@@ -127,8 +129,8 @@ export default function AdminOffersPage() {
                                         <button
                                             onClick={() => toggleActive(offer.id, offer.active)}
                                             className={`px-3 py-1 rounded-full text-xs font-medium ${offer.active
-                                                    ? 'bg-green-100 text-green-800'
-                                                    : 'bg-gray-100 text-gray-800'
+                                                ? 'bg-green-100 text-green-800'
+                                                : 'bg-gray-100 text-gray-800'
                                                 }`}
                                         >
                                             {offer.active ? 'Active' : 'Inactive'}

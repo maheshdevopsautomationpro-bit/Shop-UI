@@ -181,7 +181,7 @@ export default async function HomePage() {
                         Visit Our Store in Erode
                     </h2>
                     <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-                        Experience our quality garments in person. We're located at Brough Road, Erode.
+                        Experience our quality garments in person. We&apos;re located at Brough Road, Erode.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="/contact" className="btn bg-white text-primary-600 hover:bg-gray-100">

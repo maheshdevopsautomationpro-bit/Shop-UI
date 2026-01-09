@@ -28,7 +28,7 @@ export default function PrivacyPage() {
                             Introduction
                         </h2>
                         <p className="text-gray-600 leading-relaxed">
-                            ARUTPERUNJOTHI JAVULI KADAI, operating as SAKTHI TEXTILES ("we," "our," or "us"),
+                            ARUTPERUNJOTHI JAVULI KADAI, operating as SAKTHI TEXTILES (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;),
                             is committed to protecting your privacy. This Privacy Policy explains how we collect,
                             use, disclose, and safeguard your information when you visit our website
                             www.arutperunjothijavulikadai.in.
@@ -162,7 +162,7 @@ export default function PrivacyPage() {
                         </h2>
                         <p className="text-gray-600 leading-relaxed">
                             We may update this Privacy Policy from time to time. The updated version will be
-                            indicated by an updated "Last updated" date. We encourage you to review this
+                            indicated by an updated &quot;Last updated&quot; date. We encourage you to review this
                             Privacy Policy periodically.
                         </p>
                     </section>

@@ -26,7 +26,7 @@ export default function ContactPage() {
                         Contact Us
                     </h1>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        We'd love to hear from you. Visit our store or get in touch with us.
+                        We&apos;d love to hear from you. Visit our store or get in touch with us.
                     </p>
                 </div>
             </div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                                         {businessInfo.email}
                                     </a>
                                     <p className="text-sm text-gray-500 mt-2">
-                                        We'll respond within 24 hours
+                                        We&apos;ll respond within 24 hours
                                     </p>
                                 </div>
                             </div>
