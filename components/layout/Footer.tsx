@@ -3,33 +3,9 @@
 import Link from 'next/link';
 import { Facebook, Instagram, Twitter, Phone, Mail, MapPin } from 'lucide-react';
 
-const businessInfo = {
-    name: 'ARUTPERUNJOTHI JAVULI KADAI',
-    brand: 'SAKTHI TEXTILES',
-    address: '2ND FLOOR, NO: 19,\nELLORA COMPLEX,\nBROUGH ROAD,\nERODE – 638001,\nTAMIL NADU, INDIA',
-    phone: ['+91 97509 96633', '+91 95666 09636'],
-    gstin: '33DGMPS4403N1ZZ',
-    email: 'info@arutperunjothijavulikadai.in',
-    domain: 'www.arutperunjothijavulikadai.in',
-};
-
-const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms & Conditions', href: '/terms' },
-];
-
-const categories = [
-    { name: 'Sarees', href: '/category/sarees' },
-    { name: 'Shirts', href: '/category/shirts' },
-    { name: 'T-Shirts', href: '/category/t-shirts' },
-    { name: 'Kids Wear', href: '/category/kids-wear' },
-];
-
 export default function Footer() {
     return (
-        <footer className="bg-gray-50 border-t border-gray-100 pt-16 pb-8">
+        <footer className="bg-gray-50 border-t border-gray-100 pt-16 pb-8 text-gray-600">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand Section */}
@@ -42,54 +18,87 @@ export default function Footer() {
                                 Javuli Kadai
                             </span>
                         </Link>
-                        <p className="text-gray-500 text-sm leading-relaxed">
-                            Your destination for exquisite garments and quality fabrics. Established in 1994, we bring you the finest collection of sarees and menswear.
+                        <p className="text-sm leading-relaxed text-gray-500">
+                            Your destination for exquisite garments and quality fabrics. Established in 1994, we bring you the finest collection of sarees and menswear in Erode.
                         </p>
                         <div className="flex space-x-4">
-                            {/* Social Links */}
-                            <a href="#" className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:text-primary-600 hover:border-primary-600 transition-all">
+                            <a href="#" className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:text-primary-600 hover:border-primary-600 transition-all shadow-sm">
                                 <Facebook className="w-4 h-4" />
                             </a>
-                            <a href="#" className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:text-primary-600 hover:border-primary-600 transition-all">
+                            <a href="#" className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:text-primary-600 hover:border-primary-600 transition-all shadow-sm">
                                 <Instagram className="w-4 h-4" />
+                            </a>
+                            <a href="#" className="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:text-primary-600 hover:border-primary-600 transition-all shadow-sm">
+                                <Twitter className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
 
-                    {/* Quick Links */}
+                    {/* Shop Links */}
                     <div>
-                        <Twitter className="w-5 h-5" />
-                    </a>
+                        <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-900 mb-6">
+                            Shop
+                        </h4>
+                        <ul className="space-y-4">
+                            <li><Link href="/category/sarees" className="text-sm hover:text-primary-600 transition-colors">Women&apos;s Wear</Link></li>
+                            <li><Link href="/category/shirts" className="text-sm hover:text-primary-600 transition-colors">Men&apos;s Wear</Link></li>
+                            <li><Link href="/category/kids-wear" className="text-sm hover:text-primary-600 transition-colors">Kids Wear</Link></li>
+                            <li><Link href="/offers" className="text-sm hover:text-primary-600 transition-colors">Special Offers</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Information */}
+                    <div>
+                        <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-900 mb-6">
+                            Information
+                        </h4>
+                        <ul className="space-y-4">
+                            <li><Link href="/about" className="text-sm hover:text-primary-600 transition-colors">Our Story</Link></li>
+                            <li><Link href="/contact" className="text-sm hover:text-primary-600 transition-colors">Contact Us</Link></li>
+                            <li><Link href="/privacy" className="text-sm hover:text-primary-600 transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/terms" className="text-sm hover:text-primary-600 transition-colors">Terms of Service</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Contact Info */}
+                    <div>
+                        <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-900 mb-6">
+                            Visit Us
+                        </h4>
+                        <ul className="space-y-4 text-sm">
+                            <li className="flex items-start space-x-3">
+                                <MapPin className="w-5 h-5 text-gray-400 shrink-0 mt-0.5" />
+                                <span>
+                                    2ND FLOOR, NO: 19, ELLORA COMPLEX,<br />
+                                    BROUGH ROAD, ERODE - 638001
+                                </span>
+                            </li>
+                            <li className="flex items-center space-x-3">
+                                <Phone className="w-5 h-5 text-gray-400 shrink-0" />
+                                <span>+91 97509 96633</span>
+                            </li>
+                            <li className="flex items-center space-x-3">
+                                <Mail className="w-5 h-5 text-gray-400 shrink-0" />
+                                <span className="lowercase">info@arutperunjothi.in</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div>
-                    <p className="text-sm mb-2">Subscribe to our newsletter</p>
-                    <div className="flex">
-                        <input
-                            type="email"
-                            placeholder="Your email"
-                            className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
-                        />
-                        <button className="px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-r-lg transition-colors text-sm font-medium">
-                            Subscribe
-                        </button>
+                {/* Bottom Bar */}
+                <div className="pt-8 border-t border-gray-200">
+                    <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-center md:text-left">
+                        <p className="text-[10px] text-gray-400 uppercase tracking-widest font-medium">
+                            &copy; {new Date().getFullYear()} ARUTPERUNJOTHI JAVULI KADAI. All rights reserved.
+                        </p>
+                        <div className="flex space-x-8">
+                            <span className="text-[10px] text-gray-300 uppercase tracking-[0.3em] font-bold">Quality</span>
+                            <span className="text-[10px] text-gray-300 uppercase tracking-[0.3em] font-bold">Tradition</span>
+                            <span className="text-[10px] text-gray-300 uppercase tracking-[0.3em] font-bold">Erode</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-                {/* Bottom Bar */ }
-    <div className="mt-12 pt-8 border-t border-gray-800">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-gray-400 text-center md:text-left">
-                © {new Date().getFullYear()} {businessInfo.brand}. All rights reserved.
-            </p>
-            <p className="text-sm text-gray-400">
-                Website: <span className="text-primary-500">{businessInfo.domain}</span>
-            </p>
-        </div>
-    </div>
-            </div >
-        </footer >
+        </footer>
     );
 }
