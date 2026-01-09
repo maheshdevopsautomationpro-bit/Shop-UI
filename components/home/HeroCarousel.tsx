@@ -46,9 +46,9 @@ export default function HeroCarousel({
             <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gradient-to-r from-primary-600 to-primary-700 flex items-center justify-center">
                 <div className="text-center text-white">
                     <h1 className="text-4xl md:text-6xl font-display font-bold mb-4">
-                        Welcome to SAKTHI TEXTILES
+                        Welcome to ARUTPERUNJOTHI
                     </h1>
-                    <p className="text-xl md:text-2xl">Quality Garments in Erode</p>
+                    <p className="text-xl md:text-2xl">Quality Garments since 1994</p>
                 </div>
             </div>
         );
@@ -132,8 +132,8 @@ export default function HeroCarousel({
                             key={index}
                             onClick={() => setCurrentIndex(index)}
                             className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${index === currentIndex
-                                    ? 'bg-white w-6 md:w-8'
-                                    : 'bg-white/50 hover:bg-white/75'
+                                ? 'bg-white w-6 md:w-8'
+                                : 'bg-white/50 hover:bg-white/75'
                                 }`}
                             aria-label={`Go to banner ${index + 1}`}
                         />

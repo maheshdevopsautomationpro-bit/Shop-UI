@@ -17,15 +17,18 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-    title: 'SAKTHI TEXTILES - Quality Garments in Erode | ARUTPERUNJOTHI JAVULI KADAI',
-    description: 'Shop traditional sarees, shirts, t-shirts, and kids wear at SAKTHI TEXTILES. Quality garments with great prices in Erode, Tamil Nadu. GSTIN: 33DGMPS4403N1ZZ',
-    keywords: 'sarees, textiles, garments, Erode, Tamil Nadu, kids wear, shirts, traditional wear, SAKTHI TEXTILES',
-    authors: [{ name: 'SAKTHI TEXTILES' }],
+    title: {
+        default: 'ARUTPERUNJOTHI JAVULI KADAI | Quality Garments in Erode',
+        template: '%s | ARUTPERUNJOTHI JAVULI KADAI',
+    },
+    description: 'ARUTPERUNJOTHI JAVULI KADAI - Your destination for exquisite garments, sarees, and quality fabrics in Erode, Tamil Nadu.',
+    keywords: 'sarees, textiles, garments, Erode, Tamil Nadu, kids wear, shirts, traditional wear, ARUTPERUNJOTHI JAVULI KADAI',
+    authors: [{ name: 'ARUTPERUNJOTHI JAVULI KADAI' }],
     openGraph: {
-        title: 'SAKTHI TEXTILES - Quality Garments in Erode',
-        description: 'Shop traditional sarees, shirts, t-shirts, and kids wear at SAKTHI TEXTILES.',
+        title: 'ARUTPERUNJOTHI JAVULI KADAI - Quality Garments in Erode',
+        description: 'ARUTPERUNJOTHI JAVULI KADAI - Your destination for exquisite garments, sarees, and quality fabrics in Erode, Tamil Nadu.',
         url: 'https://www.arutperunjothijavulikadai.in',
-        siteName: 'SAKTHI TEXTILES',
+        siteName: 'ARUTPERUNJOTHI JAVULI KADAI',
         locale: 'en_IN',
         type: 'website',
     },

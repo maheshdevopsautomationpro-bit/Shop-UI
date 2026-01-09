@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Contact Us - SAKTHI TEXTILES | ARUTPERUNJOTHI JAVULI KADAI',
-    description: 'Get in touch with SAKTHI TEXTILES. Visit our store in Erode or contact us via phone, email, or WhatsApp. GSTIN: 33DGMPS4403N1ZZ',
+    title: 'Contact Us - ARUTPERUNJOTHI JAVULI KADAI',
+    description: 'Get in touch with ARUTPERUNJOTHI JAVULI KADAI. Visit our store in Erode or contact us via phone, email, or WhatsApp. GSTIN: 33DGMPS4403N1ZZ',
 };
 
 const businessInfo = {
     name: 'ARUTPERUNJOTHI JAVULI KADAI',
-    brand: 'SAKTHI TEXTILES',
+    brand: 'ARUTPERUNJOTHI',
     address: '2ND FLOOR, NO: 19,\nELLORA COMPLEX,\nBROUGH ROAD,\nERODE – 638001,\nTAMIL NADU, INDIA',
     phone: ['+91 97509 96633', '+91 95666 09636'],
     gstin: '33DGMPS4403N1ZZ',

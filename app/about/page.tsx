@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'About Us - SAKTHI TEXTILES | ARUTPERUNJOTHI JAVULI KADAI',
-    description: 'Learn about SAKTHI TEXTILES - Your trusted garment store in Erode, Tamil Nadu. Quality products and excellent service since establishment.',
+    title: 'About Us - ARUTPERUNJOTHI JAVULI KADAI',
+    description: 'Learn about ARUTPERUNJOTHI JAVULI KADAI - Your trusted garment store in Erode, Tamil Nadu. Quality products and excellent service since 1994.',
 };
 
 const businessInfo = {
     name: 'ARUTPERUNJOTHI JAVULI KADAI',
-    brand: 'SAKTHI TEXTILES',
+    brand: 'ARUTPERUNJOTHI',
     address: '2ND FLOOR, NO: 19,\nELLORA COMPLEX,\nBROUGH ROAD,\nERODE – 638001,\nTAMIL NADU, INDIA',
     phone: ['+91 97509 96633', '+91 95666 09636'],
     gstin: '33DGMPS4403N1ZZ',
@@ -22,7 +22,7 @@ export default function AboutPage() {
             <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16 md:py-20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-                        About SAKTHI TEXTILES
+                        About ARUTPERUNJOTHI
                     </h1>
                     <p className="text-xl md:text-2xl max-w-3xl mx-auto">
                         Your Trusted Partner for Quality Garments in Erode
@@ -39,8 +39,7 @@ export default function AboutPage() {
                             Our Story
                         </h2>
                         <p className="text-gray-600 leading-relaxed">
-                            <strong>ARUTPERUNJOTHI JAVULI KADAI</strong>, operating under the brand name <strong>SAKTHI TEXTILES</strong>,
-                            is a trusted name in quality garments in Erode. We specialize in traditional sarees, modern clothing,
+                            <strong>ARUTPERUNJOTHI JAVULI KADAI</strong> is a trusted name in quality garments in Erode. Established in 1994, we specialize in traditional sarees, modern clothing,
                             and kids wear, offering the best products at competitive prices.
                         </p>
                         <p className="text-gray-600 leading-relaxed">

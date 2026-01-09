@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Privacy Policy - SAKTHI TEXTILES',
-    description: 'Privacy Policy for ARUTPERUNJOTHI JAVULI KADAI (SAKTHI TEXTILES)',
+    title: 'Privacy Policy - ARUTPERUNJOTHI JAVULI KADAI',
+    description: 'Privacy Policy for ARUTPERUNJOTHI JAVULI KADAI',
 };
 
 export default function PrivacyPage() {
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
                             Introduction
                         </h2>
                         <p className="text-gray-600 leading-relaxed">
-                            ARUTPERUNJOTHI JAVULI KADAI, operating as SAKTHI TEXTILES (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;),
+                            ARUTPERUNJOTHI JAVULI KADAI (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;),
                             is committed to protecting your privacy. This Privacy Policy explains how we collect,
                             use, disclose, and safeguard your information when you visit our website
                             www.arutperunjothijavulikadai.in.

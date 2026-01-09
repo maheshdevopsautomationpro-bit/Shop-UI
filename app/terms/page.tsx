@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Terms & Conditions - SAKTHI TEXTILES',
-    description: 'Terms and Conditions for ARUTPERUNJOTHI JAVULI KADAI (SAKTHI TEXTILES)',
+    title: 'Terms & Conditions - ARUTPERUNJOTHI JAVULI KADAI',
+    description: 'Terms and Conditions for ARUTPERUNJOTHI JAVULI KADAI',
 };
 
 export default function TermsPage() {
@@ -29,7 +29,7 @@ export default function TermsPage() {
                         </h2>
                         <p className="text-gray-600 leading-relaxed">
                             By accessing and using the website www.arutperunjothijavulikadai.in operated by
-                            ARUTPERUNJOTHI JAVULI KADAI (SAKTHI TEXTILES), you agree to be bound by these
+                            ARUTPERUNJOTHI JAVULI KADAI, you agree to be bound by these
                             Terms and Conditions. If you disagree with any part of these terms, please do not
                             use our website.
                         </p>
@@ -41,7 +41,7 @@ export default function TermsPage() {
                         </h2>
                         <div className="bg-gray-50 rounded-lg p-6">
                             <p className="text-gray-900 font-semibold mb-2">ARUTPERUNJOTHI JAVULI KADAI</p>
-                            <p className="text-gray-600 text-sm">Brand: SAKTHI TEXTILES</p>
+                            <p className="text-gray-600 text-sm">Brand: ARUTPERUNJOTHI</p>
                             <p className="text-gray-600 text-sm">2ND FLOOR, NO: 19, ELLORA COMPLEX</p>
                             <p className="text-gray-600 text-sm">BROUGH ROAD, ERODE – 638001</p>
                             <p className="text-gray-600 text-sm">TAMIL NADU, INDIA</p>
