@@ -64,7 +64,7 @@ export default function HomePage() {
         : [
             {
                 id: 'default',
-                image: 'https://placehold.co/1920x800/f3f4f6/374151?text=ARUTPERUNJOTHI+JAVULI+KADAI',
+                image: 'https://placehold.co/1920x800/f3f4f6/374151',
                 title: 'Welcome to ARUTPERUNJOTHI',
                 subtitle: 'Exquisite Garments & Quality Fabrics since 1994',
             },

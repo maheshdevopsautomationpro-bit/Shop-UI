@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu, X, Search, User, ShoppingBag } from 'lucide-react';
+import { Menu, X, Search, User, ShoppingBag, Heart, Store } from 'lucide-react';
 
 const navigation = [
     { name: 'Home', href: '/' },
@@ -48,50 +48,72 @@ export default function Header() {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex lg:items-center lg:space-x-8">
+                    <div className="hidden lg:flex lg:items-center lg:space-x-6">
                         {navigation.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 relative group"
+                                className="text-[13px] text-gray-800 hover:text-primary-600 font-bold uppercase tracking-wider transition-colors duration-200"
                             >
                                 {item.name}
-                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-300"></span>
                             </Link>
                         ))}
                     </div>
 
-                    {/* Right Icons */}
-                    <div className="flex items-center space-x-4">
-                        {/* Search */}
-                        <button
-                            onClick={() => setSearchOpen(!searchOpen)}
-                            className="p-2 text-gray-700 hover:text-primary-600 transition-colors"
-                            aria-label="Search"
-                        >
+                    {/* Search Bar - Persistent Pill */}
+                    <div className="hidden xl:flex items-center flex-1 max-w-xs mx-8">
+                        <div className="relative w-full group">
+                            <input
+                                type="text"
+                                placeholder="Search product"
+                                className="w-full bg-gray-50 border border-gray-100 rounded-full px-5 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-gray-200 transition-all placeholder:text-gray-400"
+                            />
+                            <button className="absolute right-1 top-1 bottom-1 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors">
+                                <Search className="w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Right Action Icons */}
+                    <div className="flex items-center space-x-3 lg:space-x-5">
+                        {/* Mobile Search Icon */}
+                        <button className="xl:hidden p-2 text-gray-700 hover:text-primary-600 transition-colors">
                             <Search className="w-5 h-5" />
                         </button>
 
-                        {/* Account */}
-                        <Link
-                            href="/admin"
-                            className="hidden sm:flex p-2 text-gray-700 hover:text-primary-600 transition-colors"
-                            aria-label="Account"
-                        >
+                        {/* Login */}
+                        <Link href="/admin" className="flex items-center space-x-1 px-2 py-1 text-gray-700 hover:text-primary-600 transition-colors">
                             <User className="w-5 h-5" />
+                            <span className="hidden sm:inline text-sm font-bold">Login</span>
+                        </Link>
+
+                        {/* Wishlist */}
+                        <Link href="#" className="relative p-2 text-gray-700 hover:text-primary-600 transition-colors">
+                            <Heart className="w-5 h-5" />
+                            <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-primary-600 text-white text-[10px] font-bold rounded-full flex items-center justify-center">0</span>
+                        </Link>
+
+                        {/* Cart */}
+                        <Link href="#" className="relative p-2 text-gray-700 hover:text-primary-600 transition-colors">
+                            <ShoppingBag className="w-5 h-5" />
+                            <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-secondary-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">0</span>
+                        </Link>
+
+                        {/* Become Reseller */}
+                        <Link
+                            href="#"
+                            className="hidden lg:flex items-center space-x-2 px-4 py-2 bg-gray-50 hover:bg-gray-100 rounded-lg text-primary-600 transition-all border border-gray-100"
+                        >
+                            <Store className="w-4 h-4" />
+                            <span className="text-[11px] font-bold uppercase tracking-wider">Become Reseller</span>
                         </Link>
 
                         {/* Mobile menu button */}
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             className="lg:hidden p-2 text-gray-700 hover:text-primary-600 transition-colors"
-                            aria-label="Toggle menu"
                         >
-                            {mobileMenuOpen ? (
-                                <X className="w-6 h-6" />
-                            ) : (
-                                <Menu className="w-6 h-6" />
-                            )}
+                            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                         </button>
                     </div>
                 </div>

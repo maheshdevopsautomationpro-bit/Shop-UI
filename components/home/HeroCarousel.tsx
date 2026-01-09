@@ -73,28 +73,43 @@ export default function HeroCarousel({
                             sizes="100vw"
                         />
 
-                        {/* Overlay Content */}
+                        {/* Overlay Content - Nithitex Style */}
                         {(banner.title || banner.subtitle) && (
-                            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
-                                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                                    <div className="max-w-2xl text-white space-y-4 animate-fade-in">
-                                        {banner.title && (
-                                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold">
-                                                {banner.title}
-                                            </h2>
-                                        )}
+                            <div className="absolute inset-0 flex items-center">
+                                <div className="container mx-auto px-4 sm:px-6 lg:px-16">
+                                    <div className="max-w-3xl animate-fade-in space-y-2 md:space-y-4">
+                                        <div className="overflow-hidden">
+                                            {banner.title && (
+                                                <h2 className="text-4xl md:text-7xl lg:text-8xl font-serif font-black text-gray-900 leading-tight uppercase tracking-tight transform transition-transform duration-1000 translate-y-0">
+                                                    {banner.title}
+                                                </h2>
+                                            )}
+                                        </div>
+
                                         {banner.subtitle && (
-                                            <p className="text-lg md:text-xl lg:text-2xl">
-                                                {banner.subtitle}
-                                            </p>
+                                            <div className="flex flex-col space-y-4">
+                                                <p className="text-lg md:text-3xl lg:text-4xl font-sans font-bold text-gray-800 uppercase tracking-[0.3em] leading-none">
+                                                    {banner.subtitle}
+                                                </p>
+
+                                                {/* Details line replication */}
+                                                <div className="h-[1px] w-24 bg-gray-900 my-4"></div>
+
+                                                <p className="text-[10px] md:text-base font-bold text-gray-600 uppercase tracking-[0.4em] leading-relaxed max-w-xl">
+                                                    Crafting Elegance Since 1994 || Traditional Outlook || Premier Quality
+                                                </p>
+                                            </div>
                                         )}
+
                                         {banner.link && (
-                                            <a
-                                                href={banner.link}
-                                                className="inline-block btn-primary mt-4"
-                                            >
-                                                Shop Now
-                                            </a>
+                                            <div className="pt-6">
+                                                <Link
+                                                    href={banner.link}
+                                                    className="inline-flex items-center gap-2 group text-xs font-black uppercase tracking-[0.4em] text-gray-900 hover:text-primary-600 transition-colors border-b-2 border-gray-900 hover:border-primary-600 pb-2"
+                                                >
+                                                    EXPLORE COLLECTION
+                                                </Link>
+                                            </div>
                                         )}
                                     </div>
                                 </div>
@@ -104,38 +119,38 @@ export default function HeroCarousel({
                 ))}
             </div>
 
-            {/* Navigation Arrows */}
+            {/* Navigation Arrows - Compact & Elegant */}
             {banners.length > 1 && (
                 <>
                     <button
                         onClick={goToPrevious}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/80 hover:bg-white rounded-full shadow-lg transition-all z-10"
+                        className="absolute left-6 top-1/2 -translate-y-1/2 p-2 group hover:bg-white rounded-full transition-all z-10 hidden md:block border border-gray-200/50"
                         aria-label="Previous banner"
                     >
-                        <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-900" />
+                        <ChevronLeft className="w-6 h-6 text-gray-400 group-hover:text-gray-900" />
                     </button>
                     <button
                         onClick={goToNext}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 bg-white/80 hover:bg-white rounded-full shadow-lg transition-all z-10"
+                        className="absolute right-6 top-1/2 -translate-y-1/2 p-2 group hover:bg-white rounded-full transition-all z-10 hidden md:block border border-gray-200/50"
                         aria-label="Next banner"
                     >
-                        <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-900" />
+                        <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-gray-900" />
                     </button>
                 </>
             )}
 
-            {/* Dots Indicator */}
+            {/* Bottom Indicators - Pill Style */}
             {banners.length > 1 && (
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
                     {banners.map((_, index) => (
                         <button
                             key={index}
                             onClick={() => setCurrentIndex(index)}
-                            className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${index === currentIndex
-                                ? 'bg-white w-6 md:w-8'
-                                : 'bg-white/50 hover:bg-white/75'
+                            className={`h-1 transition-all duration-500 rounded-full ${index === currentIndex
+                                ? 'bg-gray-900 w-12'
+                                : 'bg-gray-300 w-4 hover:bg-gray-400'
                                 }`}
-                            aria-label={`Go to banner ${index + 1}`}
+                            aria-label={`Go to slide ${index + 1}`}
                         />
                     ))}
                 </div>
